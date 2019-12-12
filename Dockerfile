@@ -5,4 +5,5 @@ COPY server.py requirements.txt /app/
 RUN pip install -r /app/requirements.txt
 
 WORKDIR /app
-CMD ["python", "server.py"]
+EXPOSE 8080
+CMD ["/app/server.py"]
