@@ -1,10 +1,15 @@
 #!/usr/bin/env python
+import logging
 import os
 from bottle import route, run
 
 
+logging.basicConfig(level=logging.DEBUG)
+
+
 @route('/hello')
 def hello():
+    logging.debug('Requested hello')
     return "Hello World!"
 
 
